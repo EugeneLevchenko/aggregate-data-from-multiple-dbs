@@ -1,0 +1,8 @@
+server:
+  port: 8080
+openapi:
+  dev-url: http://localhost:8080
+  prod-url: http://comparus-ua-test-task.eu-west-2.elasticbeanstalk.com
+spring:
+  jpa:
+    open-in-view: false

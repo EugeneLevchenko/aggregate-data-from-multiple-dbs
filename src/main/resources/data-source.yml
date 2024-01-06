@@ -1,0 +1,35 @@
+data-sources:
+  databases:
+    - name: sampleDB
+      strategy: postgres
+      url: jdbc:postgresql://postgres-db-comparus.cdoq0iaqedb4.eu-west-2.rds.amazonaws.com:5432/
+      table: users
+      user: postgres
+      password: password
+      mapping:
+        id: user_id
+        username: login
+        name: first_name
+        surname: last_name
+    - name: sampleDB
+      strategy: mysql
+      url: jdbc:mysql://mysql-db-comparus.cdoq0iaqedb4.eu-west-2.rds.amazonaws.com:3306/
+      table: user_table
+      user: root
+      password: password
+      mapping:
+        id: ldap_login
+        username: ldap_user_login
+        name: ldap_name
+        surname: ldap_surname
+    - name: sampleDB
+      strategy: oracle
+      url: jdbc:oracle:thin:@oracle-db-comparus.cdoq0iaqedb4.eu-west-2.rds.amazonaws.com:1521/
+      table: oracle_users
+      user: admin
+      password: password
+      mapping:
+        id: oracle_id
+        username: oracle_username
+        name: oracle_name
+        surname: oracle_surname
